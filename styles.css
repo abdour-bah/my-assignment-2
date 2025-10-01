@@ -1,0 +1,133 @@
+/* For smoother scrolling*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*  General body styles*/
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    background-color: #dad4d4;
+    color: #333;
+}
+
+/*  sidebar for Desktops*/
+
+#navbar{
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    width: 250px;
+    height: 100%;
+    background-color: #b1b5de;
+    color: rgb(50, 25, 25);
+    padding: 15px;
+    border-right: 3px solid rgb(127, 98, 98);
+    
+}
+
+#navbar header{
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f7223b;
+    font-weight: 500%;
+}
+
+#navbar a{
+    color: rgb(83, 4, 4);
+    text-decoration: none;
+    display: block;
+    margin: 25px 0;
+    border-bottom: 1px solid rgb(54, 53, 53);
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+#navbar a:hover{
+    color: #0056b3;
+}
+
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#navbar li{
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+/*  For mobile navigation*/
+
+#mobile-navbar{
+    display: none; /* this hides the mobile navbar by default. simply telling the browser to pretend this does not exist*/
+    background-color: #b1b5de;
+    position: sticky; /*  This prevents the bar from moving*/
+    z-index: 1000; /* This allows the bar to be above the content*/
+}
+
+#mobile-navbar ul{
+    padding: 15px;
+    list-style: none;
+
+
+}
+
+#mobile-navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+#mobile-navbar a:hover{
+    color: #0056b3;
+}
+
+/* Main Content styles*/
+
+#main-doc {
+    margin-left: 300px; /* Leaves a gap between the main content and sidebar*/
+    margin-top: 5px; /* Leaves a tiny gap between the main content and box top*/
+    padding: 15px; /* prevents content from touching edge of the box on both sides*/
+    background-color: rgb(197, 187, 187);
+
+}
+
+section {
+    margin-bottom: 50px; /* space between subsequent sections*/
+
+}
+
+h2{
+    border-top: 2px solid #978d8d;
+    padding-bottom:3px;
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+/* Responsive design*/
+
+@media (max-width: 768px) {
+    #mobile-navbar{
+        display: block;
+    }
+
+    #navbar{
+        display: none; /* This hides desktop sidebar on small screens*/
+    }
+
+    #main-doc{
+        margin-left: 0; /* removes left margin of the main content used for the sidebar*/
+    }
+    
+}
+
+
+
+
